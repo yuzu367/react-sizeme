@@ -220,7 +220,7 @@ function withSize(config = defaultConfig) {
         this.strategy === 'callback' ? this.callbackState : this.state
 
       handleDOMNode() {
-        const found = this.element && ReactDOM.findDOMNode(this.element)
+        const found = this.element
 
         if (!found) {
           // If we previously had a dom node then we need to ensure that
