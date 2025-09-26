@@ -1,4 +1,4 @@
-import { terser } from '@rollup/plugin-terser'
+const terser = require('@rollup/plugin-terser')
 const packageJson = require('./package.json')
 
 const baseConfig = require('./rollup.config.js')
