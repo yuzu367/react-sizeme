@@ -24,10 +24,7 @@
     "build": "node ./tools/scripts/build.js",
     "clean": "rimraf ./dist && rimraf ./coverage",
     "lint": "eslint src",
-    "prepublish": "yarn run build",
-    "test": "jest",
-    "test:coverage": "yarn run test -- --coverage",
-    "test:coverage:deploy": "yarn run test:coverage && codecov"
+    "prepublish": "yarn run build"
   },
   "dependencies": {
     "element-resize-detector": "^1.2.2",
@@ -43,16 +40,13 @@
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
     "@babel/register": "^7.15.3",
-    "@types/react": "^17.0.19",
-    "@types/react-dom": "^17.0.9",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "app-root-dir": "1.0.2",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "codecov": "^3.8.3",
     "cross-env": "^7.0.3",
-    "enzyme": "^3.11.0",
-    "enzyme-to-json": "^3.6.2",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -68,31 +62,15 @@
     "prettier": "^2.3.2",
     "pretty-bytes": "5.6.0",
     "ramda": "^0.27.1",
-    "react": "^17.0.2",
-    "react-addons-test-utils": "^15.6.0",
-    "react-dom": "^17.0.2",
-    "react-test-renderer": "^17.0.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "readline-sync": "1.4.10",
     "rimraf": "^3.0.2",
     "rollup": "^2.56.3",
     "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-uglify": "^6.0.4",
+    "@rollup/plugin-terser": "^0.3.0",
     "title-case": "^3.0.3",
-    "typescript": "^4.3.5",
-    "typings-tester": "^0.3.2"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "snapshotSerializers": [
-      "<rootDir>/node_modules/enzyme-to-json/serializer"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/(coverage|dist|node_modules|tools)/",
-      "<rootDir>/src/__tests__/typescript/"
-    ],
-    "testURL": "http://localhost/"
+    "typescript": "^4.3.5"
   },
   "eslintConfig": {
     "root": true,
